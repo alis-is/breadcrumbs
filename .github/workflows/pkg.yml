@@ -26,10 +26,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: node-modules-cache-${{ hashFiles('package-lock.json') }}
       - name: Install Node dependencies.
         run: npm install
 
